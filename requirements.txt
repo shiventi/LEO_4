@@ -4,5 +4,5 @@ beautifulsoup4
 google-generativeai
 pathlib
 playsound
-re
+regex
 googlesearch
