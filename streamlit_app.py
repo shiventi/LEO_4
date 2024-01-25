@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 import requests
-from beautifulsoup4 import BeautifulSoup
+from bs4 import BeautifulSoup
 import google.generativeai as genai
 from pathlib import Path
 from subprocess import call
