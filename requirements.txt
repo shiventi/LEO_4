@@ -5,4 +5,4 @@ google-generativeai
 pathlib
 playsound
 regex
-googlesearch
+googlesearch-python
