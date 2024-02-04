@@ -55,6 +55,10 @@ st.set_page_config(page_title="LEO", page_icon="🦁", layout = "wide")
 
 st.sidebar.markdown("# **🦁💬 LEO**")
 
+a = st.secrets["NAME"]
+
+st.write(a)
+
 st.sidebar.markdown("This personal assistant is created using the open-source Gemini-Pro and Pro-Vision LLM model from Google.")
 
 if check_internet_connection():
