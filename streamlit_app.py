@@ -73,10 +73,14 @@ if not google_api_key:
     st.stop()
 
 name = st.secrets["NAME"]["name"]
-st.write(name)
 
-os.environ['GOOGLE_API_KEY'] = google_api_key
-genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
+
+if str(name) == str(google_api_key):
+    os.environ['GOOGLE_API_KEY'] = st.secrets["KEY"]["google_api_key"]
+    genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
+else:
+    os.environ['GOOGLE_API_KEY'] = google_api_key
+    genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 
 st.sidebar.divider()
 
