@@ -20,7 +20,7 @@ Before using LEO 4, make sure you have the following:
 2. **Run the Application:**
    ```bash
    streamlit run your_script_name.py
-3. ** Features **
+3. **Features**
 
 - **Chat Interface:** Communicate with LEO 4 using the chat interface.
 - **File Upload:** Upload images or text files for analysis.
@@ -28,6 +28,6 @@ Before using LEO 4, make sure you have the following:
 - **Find Link:** Search for links related to a specific query.
 - **Timer:** Set a timer and receive notifications when it completes.
 
-** CUSTOMIZE ** 
+**CUSTOMIZE** 
 
 Feel free to customize and mess around with LEO!
