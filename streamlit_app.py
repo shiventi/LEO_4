@@ -55,9 +55,7 @@ st.set_page_config(page_title="LEO", page_icon="🦁", layout = "wide")
 
 st.sidebar.markdown("# **🦁💬 LEO**")
 
-a = st.secrets["NAME"]
 
-st.write(a)
 
 st.sidebar.markdown("This personal assistant is created using the open-source Gemini-Pro and Pro-Vision LLM model from Google.")
 
@@ -74,7 +72,8 @@ if not google_api_key:
     st.sidebar.warning("Please enter your Google API key.")
     st.stop()
 
-
+name = st.secrets["NAME"]["name"]
+st.write(name)
 
 os.environ['GOOGLE_API_KEY'] = google_api_key
 genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
