@@ -28,6 +28,6 @@ Before using LEO 4, make sure you have the following:
 - **Find Link:** Search for links related to a specific query.
 - **Timer:** Set a timer and receive notifications when it completes.
 
-**CUSTOMIZE** 
+## CUSTOMIZE
 
 Feel free to customize and mess around with LEO!
