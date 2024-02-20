@@ -173,7 +173,7 @@ if selected_reminder_type == "Web Scrape":
             message = {"role": "assistant", "content": response}
             st.session_state.messages.append(message)
         except Exception as e:
-            st.write_stream(f"Error: {e}")
+            st.write(f"Error: {e}")
 
 reminder_types_s = ["Select","Find Link"]
 selected_reminder_type = st.sidebar.selectbox("Find Link", reminder_types_s)
@@ -194,7 +194,7 @@ if selected_reminder_type == "Find Link":
                     st.info(f"Error: {e}")
     
         except Exception as e:
-            st.write_stream(f"Error: {e}")
+            st.write(f"Error: {e}")
 
 
 st.sidebar.divider()
@@ -216,19 +216,19 @@ if st.session_state.messages[-1]["role"] != "assistant":
                     content_type = "text"
                     content_data = uploaded_file.getvalue().decode("utf-8")
                 else:
-                    st.write_stream("Unsupported file type. Please upload an image, .txt, .doc, .docx, .py, .ipynb, or .pdf file.")
+                    st.write("Unsupported file type. Please upload an image, .txt, .doc, .docx, .py, .ipynb, or .pdf file.")
                     content_type = None
                     content_data = None
 
                 if content_type:
                     response = generate_google_response(prompt, content_data=content_data, content_type=content_type)
-                    st.write_stream(response)
+                    st.write(response)
 
                     if content_type == "image":
                         os.remove(image_path)
             else:
                 response = generate_google_response(prompt)
-                st.write_stream(response)
+                st.write(response)
 
     message = {"role": "assistant", "content": response}
     st.session_state.messages.append(message)
